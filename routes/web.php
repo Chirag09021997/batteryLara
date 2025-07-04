@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InstallerController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('installer', InstallerController::class);
+    Route::resource('product', ProductController::class);
 });
 
 require __DIR__ . '/auth.php';
