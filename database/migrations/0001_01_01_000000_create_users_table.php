@@ -18,8 +18,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('mobile_no')->nullable();
+            $table->string('profile')->nullable();
             $table->enum('role', ['Admin', 'Installer'])->default('Installer');
             $table->rememberToken();
+            $table->enum('status', ['Active', 'Inactive'])->default('Active');
             $table->timestamps();
             $table->softDeletes();
         });

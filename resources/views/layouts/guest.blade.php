@@ -17,8 +17,8 @@
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex flex-col justify-center items-center bg-gray-100 dark:bg-[#20140b]">
-        <div class="w-full sm:max-w-md px-6 py-4 bg-white dark:bg-[#2c2520] shadow-md overflow-hidden sm:rounded-lg">
+    <div class="min-h-screen flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900">
+        <div class="w-full sm:max-w-md px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
             <a href="/" class="flex flex-row items-center justify-center gap-2">
                 <div class="bg-orange-100 rounded-md px-3 py-1 mb-2">
                     <span class="text-4xl font-bold text-[rgb(255,126,27)]">U</span>

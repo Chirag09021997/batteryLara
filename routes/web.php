@@ -4,9 +4,10 @@ use App\Http\Controllers\InstallerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::redirect('/', '/login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -17,7 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('installer/data', [InstallerController::class, 'getData'])->name('installer.data');
     Route::resource('installer', InstallerController::class);
 });
 

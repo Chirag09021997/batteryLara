@@ -22,6 +22,22 @@
             </div>
             <!-- User Profile Dropdown -->
             <div class="relative flex items-center ms-3">
+                <div class="flex items-center space-x-2 mx-4 mr-2">
+                    <button
+                        @click="if(document.documentElement.classList.contains('dark')) {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.setItem('darkMode', 'false');
+                        } else {
+                            document.documentElement.classList.add('dark');
+                            localStorage.setItem('darkMode', 'true');
+                        }"
+                        class="flex items-center p-2 text-orange-500 rounded-lg focus:outline-none dark:focus:ring-gray-600">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707 8.001 8.001 0 1017.293 13.293z" />
+                        </svg>
+                    </button>
+                </div>
+
                 <button type="button"
                     class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                     @click="open = !open;">
