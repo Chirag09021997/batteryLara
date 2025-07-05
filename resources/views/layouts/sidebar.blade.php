@@ -25,7 +25,7 @@
                 </a>
             </li>
 
-
+            @if(auth()->check() && auth()->user()->role === 'Admin')
             <li>
                 <button type="button" @class([
                     'flex items-center w-full p-2 text-base transition duration-75 rounded-lg group',
@@ -117,7 +117,7 @@
                     </li>
                 </ul>
             </li>
-
+            @endif
         </ul>
     </div>
 </aside>

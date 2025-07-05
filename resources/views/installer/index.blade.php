@@ -182,6 +182,10 @@
         </script>
     @endPushOnce
 
+    <x-head-label>
+        {{ __('Installer List') }}
+    </x-head-label>
+
     <div class="py-4">
         <div class="overflow-x-auto bg-white dark:text-white dark:bg-gray-800 p-3">
             <table id="myTable" class="min-w-full">
